@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sample JavaScript 10 Page</title>
-
+    <title>Simple Calculator</title>
 </head>
+
 <body>
 
+    <h1>Simple Calculator</h1>
 
-  <h3>This is a sample Javascript and HTML document.</h3>
+    <p>Enter the first number:</p>
+    <input type="number" id="num1">
 
+    <p>Enter the second number:</p>
+    <input type="number" id="num2">
 
-<script>
-window.alert("hi");
-window.alert("Maelyn");  
-</script>
-  
+    <br><br>
 
-  
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+
+            let answer = num1 + num2;
+
+            document.getElementById("result").innerHTML = "Answer: " + answer;
+        }
+    </script>
+
 </body>
 </html>
-
